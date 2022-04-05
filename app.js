@@ -10,6 +10,11 @@ const changeColor = ()=>{
     const colors    = ['red','yellow','green'];
     const color     = colors[colorIndex];
     turnOn[color]();
+    if(colorIndex < 2){
+        colorIndex++;
+    }else{
+        colorIndex = 0;
+    }
 }
 buttons.addEventListener('click',semaforo);
 
