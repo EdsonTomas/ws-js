@@ -8,6 +8,8 @@ buttons.addEventListener('click',(event)=>{
     clearInterval(intervalId);
     turnOn[event.target.id]();
 });
+const proximoIndice = ()=> indexColor = indexColor < 2 ? ++indexColor : 0;
+
 
 const trocarCor = ()=>{
     
@@ -15,11 +17,8 @@ const trocarCor = ()=>{
     const cor   =   cores[indexColor];    
     turnOn[cor]();
    
-    if(indexColor < 2){
-        indexColor ++
-    }else{
-        indexColor = 0;
-    }
+    proximoIndice();
+    
     console.log(indexColor);
 }
 
